@@ -1,0 +1,16 @@
+@import './component/header';
+@import './component/home';
+@import './component/profile';
+*,::after,::before{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+     font-size: 62.5%;
+}
+@media (max-width:960px){
+    html{
+             font-size: 50%;
+    }
+}
