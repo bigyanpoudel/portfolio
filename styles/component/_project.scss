@@ -1,0 +1,106 @@
+.Project {
+    width: 100%;
+    min-height: 70rem;
+    background-color: rgb(245, 245, 245);
+    position: relative;
+
+    padding: 5rem .5rem;
+
+    &__container {
+        width: 87%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    &__figure {
+        position: relative;
+
+
+    }
+
+    &__figcaption {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        letter-spacing: .2rem;
+        text-align: center;
+        padding-top: 3rem;
+        width: 100%;
+        font-size: 1.8rem;
+        background-color: rgb(245, 245, 245);
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        height: 250px;
+        opacity: 0;
+        display: block;
+        transition: all .3s ease;
+
+        h3 {
+            font-weight: 400;
+            color: rgb(227, 27, 109)
+        }
+
+        &-link {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        a {
+            margin-bottom: 1rem;
+            padding: 1rem 2.5rem;
+            font-family: 'Raleway',
+                sans-serif;
+            font-weight: 400;
+            color: black;
+            text-decoration: none;
+            border: .1rem solid rgb(227, 27, 109);
+            text-transform: uppercase;
+
+            &:hover,
+            &:focus {
+                color: white;
+                background-color: rgb(227, 27, 109);
+            }
+        }
+
+
+    }
+
+}
+
+.Project__figure:hover .Project__figcaption {
+    opacity: 1;
+    z-index: 1;
+    cursor: pointer;
+}
+
+@media (max-width:960px) {
+    .Project__container {
+        width: 100%;
+    }
+
+
+
+
+}
+
+@media(max-width:720px) {
+    .Project__container {
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}

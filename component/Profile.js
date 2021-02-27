@@ -1,16 +1,30 @@
 import React from 'react'
 import Image from 'next/Image'
-const Profile = () => {
+import {
+
+  urlFor,
+  PortableText
+  } from '../lib/sanity'
+const Profile = ({author}) => {
+
     return (
-        <div className="Profile">
+        <section className="Profile" id="profile">
+              
+             <div className="header__title grey">About</div>
              <div className="Profile__Image" >
-                <div className="Profile__shadow"></div>
-                <Image className="Profile-image"width="300" height="350" src="/static/images/DSC_0029.JPG" alt="bigyan" />
+                <Image className="Profile-image"width={200} height={200}   layout="intrinsic" quality={50}
+                 src={urlFor(author.image).url()} alt="bigyan" loading="lazy"/>
             </div>
             <div className="Profile__section">
+                <PortableText blocks={author.bio}/>
+                <div className="button__group">
+                    <button className="button button__contact">Contact me</button>
+                    <button className="button button__hire">Hire me</button>
+                </div>
             </div>
-        </div>
+        </section>
     )
 }
+
 
 export default Profile

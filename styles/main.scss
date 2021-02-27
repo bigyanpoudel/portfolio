@@ -1,16 +1,62 @@
 @import './component/header';
 @import './component/home';
 @import './component/profile';
-*,::after,::before{
-    margin:0;
+@import './component/skill';
+@import './component/project';
+@import './component/blog';
+@import './component/contact';
+@import './component/footer';
+*,
+::after,
+::before {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
-html{
-     font-size: 62.5%;
+
+html {
+    font-size: 62.5%;
 }
-@media (max-width:960px){
-    html{
-             font-size: 50%;
+
+@media (max-width:960px) {
+    html {
+        font-size: 50%;
     }
+}
+
+@media (max-width:500px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+.header__title {
+    font-size: 4rem;
+    text-align: center;
+    position: relative;
+    letter-spacing: .2rem;
+    margin: 3rem 0;
+    text-transform: uppercase;
+    font-family: 'Raleway';
+    font-weight: 800;
+    margin-bottom: 5rem;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 5rem;
+        width: 9rem;
+        height: 0.5rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: #00acc1;
+    }
+}
+
+.header__title.white {
+    color: white;
+}
+
+.header__title.grey {
+    color: #45474a
 }
